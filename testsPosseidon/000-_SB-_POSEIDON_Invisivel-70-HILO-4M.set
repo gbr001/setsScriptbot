@@ -342,7 +342,7 @@ pIndicador50=
 ajudaVLembrete1=EX: NEW, SYMBOL, CURRENT, INT0, INT5, EXPONENTIAL, CLOSE
 ajudaVLembrete2=EX: STR0 && 0:IND1[INT0] < 1:IND0[2] && 0:IND0[1] > 1:IND0[1]
 ; ▪ Integers
-int0=300
+int0=301
 int1=-150
 int2=0||0||1||10||N
 int3=0||0||1||10||N
