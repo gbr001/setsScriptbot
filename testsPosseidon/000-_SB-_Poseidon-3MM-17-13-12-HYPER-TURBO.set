@@ -1,0 +1,398 @@
+; saved on 2022.03.31 11:07:56
+; this file contains input parameters for testing/optimizing ScriptBot expert advisor
+; to use it in the strategy tester, click Load in the context menu of the Inputs tab
+;
+; ✔ Documentação e Links úteis:
+ajudaLembrete0=wiki.ultracode.org
+ajudaLembrete1=discord.gg/AdVsTqVDE7
+ajudaLembrete2=wiki.ultracode.org/robos/scriptbot/estrutura/otimizacoes
+; 
+; ✔ Configurações do Robô:
+idRobo=15224021
+configuracaoNome=Poseidon-3MM-17-13-12-HYPER-TURBO
+tempoGrafico=0||0||0||49153||N
+tempoSinais=2
+variasEntradasCandle=1||0||0||1||N
+fecharTudoSaldoNegativo=1||0||0||1||N
+calcularMargem=1||0||0||1||N
+; ✔ Conta:
+contratos=2
+contratosMax=21
+; ✔ Ajustes:
+passosCalculo=1||0||0||1||N
+posicaoMetodo=2||0||0||3||N
+fecharMetodoPos=0||0||0||4||N
+fecharMetodoOrd=1||0||0||4||N
+tipoCompra=0||0||0||6||N
+tipoVenda=0||0||0||6||N
+posicaoVelaRef=0||0||1||10||N
+ajuste=5||5||0.500000||50.000000||N
+pendenteCancelar=0||0||0||1||N
+pendenteCancelarTempo=120||120||1||1200||N
+alvoStopLoss=2||0||0||2||N
+stopLossInput=800||20||2.000000||200.000000||N
+alvoStopGain=0||0||0||1||N
+stopGainInput=250||20||2.000000||200.000000||N
+; ✔ Break Even:
+breakEven=1||0||0||1||N
+breakEvenAlvo=250||20||2.000000||200.000000||N
+breakEvenNiveis=2||2||1||20||N
+breakEvenAjuste=4||4||0.400000||40.000000||N
+breakEvenAjusteExtra=1||1||0.100000||10.000000||N
+breakEvenPorcentagem1=0||0||0||100||N
+breakEvenPorcentagem2=0||0||0||100||N
+; ✔ Stop Móvel:
+stopMovel=1||0||0||1||N
+stopMovelAlvo=250||2||0.200000||20.000000||N
+stopMovelPorcentagem=85||0||0||100||N
+; ✔ Martigale:
+martigale=0||0||0||1||N
+matigaleCalculo=1||0||0||1||N
+martigaleAdd=2||2||0.200000||20.000000||N
+martigaleMaximo=10||1000||100.000000||10000.000000||N
+martigaleSemEntradas=1||0||0||1||N
+martigaleResetarMaximo=0||0||0||1||N
+martigaleResetar=0||0||0||1||N
+martigaleResetarDia=0||0||0||1||N
+; ✔ Sorosgale:
+sorosgale=0||0||0||1||N
+sorosgaleCalculo=1||0||0||1||N
+sorosgaleAdd=2||2||0.200000||20.000000||N
+sorosgaleMaximo=10||1000||100.000000||10000.000000||N
+sorosgaleSemEntradas=1||0||0||1||N
+sorosgaleResetarMaximo=0||0||0||1||N
+sorosgaleResetar=0||0||0||1||N
+sorosgaleResetarDia=0||0||0||1||N
+; ✔ Straddle:
+straddle=1||0||0||1||N
+straddleAlvo=20||20||2.000000||200.000000||N
+straddleCalculo=1||0||0||2||N
+straddleAdd=2||2||0.200000||20.000000||N
+straddleCustomizado=1=*2, 2=+1, 6=*2, 7=-1, 8=-1
+straddleMaximo=1024||1024||102.400000||10240.000000||N
+straddleMaximoVirada=8||8||0.800000||80.000000||N
+straddleStop=0||0||0.000000||0.000000||N
+straddleGain=0||0||0.000000||0.000000||N
+straddleParar=0||0||0||1||N
+straddleFechar=1||0||0||1||N
+; ✔ Gradiente linear:
+gradient=1||0||0||1||N
+gradientCompra=2||0||0||3||N
+gradientVenda=2||0||0||3||N
+gradientAbaixo=0||0||0||1||N
+gradientAcima=1||0||0||1||N
+gradientAlvo=10||10||1.000000||100.000000||N
+gradientNiveis=2||2||1||20||N
+gradientAjuste=10||10||1.000000||100.000000||N
+gradientRecarregar=0||0||0||1||N
+gradientTake=5||5||0.500000||50.000000||N
+gradientStop=0||0||0.000000||0.000000||N
+; ✔ Horários e Dias:
+roboFechar=0||0||0||1||N
+abertura=32700||-1||0||86100||N
+fechamento=64200||-1||0||86100||N
+domingo=1||0||0||1||N
+segunda=0||0||0||1||N
+terca=0||0||0||1||N
+quarta=0||0||0||1||N
+quinta=0||0||0||1||N
+sexta=0||0||0||1||N
+sabado=1||0||0||1||N
+; ✔ Extras / Visual:
+extraLog=2
+extraBoleta=0
+extraBoletaTrade=1
+extraResultados=1
+extraEntradas=0
+extraSinais=0
+extraHorarios=0
+extraLimparObjetos=0
+extraPrecoCustom=0
+extraInformacao=1
+; 
+; ✔ Verificador de Buffers:
+ajudaBLembrete0=Gera um spam contendo o buffers e valores do indicador.
+verificadorBuffer=-1
+; 
+; ✔ Calculos de Confirmação secundária:
+ajudaGLembrete0=Calculo executado apos a confirmacao do calculo de entrada.
+; ▪ CONFIRMAÇÃO COMPRA
+calculoConfirmacaoC1=ALL_PROFIT < INT0 && ALL_PROFIT > INT1
+calculoConfirmacaoC2=&& BUY_OPEN < 5
+calculoConfirmacaoC3=&& CURRENT_TIME < FINAL_TIME - 7200
+calculoConfirmacaoC4=
+calculoConfirmacaoC5=
+; ▪ CONFIRMAÇÃO VENDA
+calculoConfirmacaoV1=ALL_PROFIT < INT0 && ALL_PROFIT > INT1
+calculoConfirmacaoV2=&& SELL_OPEN < 5
+calculoConfirmacaoV3=&& CURRENT_TIME < FINAL_TIME - 7200
+calculoConfirmacaoV4=
+calculoConfirmacaoV5=
+; 
+; ✔ Calculos de Entrada:
+ajudaCLembrete0=Executa o calculo para verificar novos pontos de entrada.
+; ▪ COMPRA
+sinaisCompra=1||1||1||10||N
+calculoCompra1=0:IND41[1] > 0:IND42[1] > 0:IND43[1] |
+calculoCompra2=CLOSE[1] > OPEN[1]
+calculoCompra3=
+calculoCompra4=
+calculoCompra5=12>13 && 12>17
+calculoCompra6=
+calculoCompra7=
+calculoCompra8=
+calculoCompra9=
+calculoCompra10=
+; ▪ VENDA
+sinaisVenda=1||1||1||10||N
+calculoVenda1=CLOSE[0] > 0:IND42[0]
+calculoVenda2=
+calculoVenda3=
+calculoVenda4=
+calculoVenda5=
+calculoVenda6=
+calculoVenda7=
+calculoVenda8=
+calculoVenda9=
+calculoVenda10=
+; 
+; ✔ Calculos de Saida:
+ajudaCLembrete2=Executa o calculo para verificar pontos de saida.
+; ▪ SAIDA COMPRA
+calculoCompraSaida1=CLOSE[0] >= 0:IND40[0]
+calculoCompraSaida2=
+calculoCompraSaida3=
+calculoCompraSaida4=
+calculoCompraSaida5=
+calculoCompraSaida6=
+calculoCompraSaida7=
+calculoCompraSaida8=
+calculoCompraSaida9=
+calculoCompraSaida10=
+; ▪ SAIDA VENDA
+calculoVendaSaida1=CLOSE[0] <= 0:IND22[0]
+calculoVendaSaida2=
+calculoVendaSaida3=
+calculoVendaSaida4=
+calculoVendaSaida5=
+calculoVendaSaida6=
+calculoVendaSaida7=
+calculoVendaSaida8=
+calculoVendaSaida9=
+calculoVendaSaida10=
+; 
+; ✔ Indicadores:
+ajudaILembrete2=Use as variaveis para trocar os valores usando a otimizacao.
+ajudaILembrete3=Os indicadores podem ser trocados ou removidos.
+; ▪ IND0
+iIndicador0=AC
+pIndicador0=NEW, SYMBOL, CURRENT
+; ▪ IND1
+iIndicador1=AD
+pIndicador1=NEW, SYMBOL, CURRENT, TICK
+; ▪ IND2
+iIndicador2=ADX
+pIndicador2=NEW, SYMBOL, CURRENT, 14
+; ▪ IND3
+iIndicador3=ADXW
+pIndicador3=NEW, SYMBOL, CURRENT, 14
+; ▪ IND4
+iIndicador4=ALLIGATOR
+pIndicador4=0, SYMBOL, CURRENT, 13, 8, 8, 5, 5, 3, SMOOTHED, MEDIAN
+; ▪ IND5
+iIndicador5=AMA
+pIndicador5=0, SYMBOL, CURRENT, 10, 2, 30, 0, CLOSE
+; ▪ IND6
+iIndicador6=AO
+pIndicador6=NEW, SYMBOL, CURRENT
+; ▪ IND7
+iIndicador7=ATR
+pIndicador7=NEW, SYMBOL, CURRENT, 14
+; ▪ IND8
+iIndicador8=BANDS
+pIndicador8=0, SYMBOL, CURRENT, 20, 0, 2.0, CLOSE
+; ▪ IND9
+iIndicador9=BEARS
+pIndicador9=NEW, SYMBOL, CURRENT, 13
+; ▪ IND10
+iIndicador10=BULLS
+pIndicador10=NEW, SYMBOL, CURRENT, 13
+; ▪ IND11
+iIndicador11=BWMFI
+pIndicador11=NEW, SYMBOL, CURRENT, TICK
+; ▪ IND12
+iIndicador12=CCI
+pIndicador12=NEW, SYMBOL, CURRENT, 14, TYPICAL
+; ▪ IND13
+iIndicador13=CHAIKIN
+pIndicador13=NEW, SYMBOL, CURRENT, 3, 10, EXPONENTIAL, TICK
+; ▪ IND14
+iIndicador14=DEMA
+pIndicador14=0, SYMBOL, CURRENT, 14, 0, CLOSE
+; ▪ IND15
+iIndicador15=DEMARKER
+pIndicador15=NEW, SYMBOL, CURRENT, 14
+; ▪ IND16
+iIndicador16=ENVELOPES
+pIndicador16=0, SYMBOL, CURRENT, 14, 0, EXPONENTIAL, CLOSE, 0.1
+; ▪ IND17
+iIndicador17=FORCE
+pIndicador17=NEW, SYMBOL, CURRENT, 13, SIMPLE, TICK
+; ▪ IND18
+iIndicador18=FRACTALS
+pIndicador18=0, SYMBOL, CURRENT
+; ▪ IND19
+iIndicador19=FRAMA
+pIndicador19=0, SYMBOL, CURRENT, 14, 0, CLOSE
+; ▪ IND20
+iIndicador20=GATOR
+pIndicador20=NEW, SYMBOL, CURRENT, 13, 8, 8, 5, 5, 3, SMOOTHED, MEDIAN
+; ▪ IND21
+iIndicador21=ICHIMOKU
+pIndicador21=0, SYMBOL, CURRENT, 9, 26, 52
+; ▪ IND22
+iIndicador22=MA
+pIndicador22=0, SYMBOL, CURRENT, 3, 0, LINEAR, LOW
+; ▪ IND23
+iIndicador23=MACD
+pIndicador23=NEW, SYMBOL, CURRENT, 12, 26, 9, CLOSE
+; ▪ IND24
+iIndicador24=MFI
+pIndicador24=NEW, SYMBOL, CURRENT, 14, TICK
+; ▪ IND25
+iIndicador25=MOMENTUM
+pIndicador25=NEW, SYMBOL, CURRENT, 14, CLOSE
+; ▪ IND26
+iIndicador26=OBV
+pIndicador26=NEW, SYMBOL, CURRENT, TICK
+; ▪ IND27
+iIndicador27=OSMA
+pIndicador27=NEW, SYMBOL, CURRENT, 12, 26, 9, CLOSE
+; ▪ IND28
+iIndicador28=RSI
+pIndicador28=NEW, SYMBOL, CURRENT, 14, CLOSE
+; ▪ IND29
+iIndicador29=RVI
+pIndicador29=NEW, SYMBOL, CURRENT, 10
+; ▪ IND30
+iIndicador30=SAR
+pIndicador30=0, SYMBOL, CURRENT, 0.02, 0.2
+; ▪ IND31
+iIndicador31=STDDEV
+pIndicador31=NEW, SYMBOL, CURRENT, 20, 0, SIMPLE, CLOSE
+; ▪ IND32
+iIndicador32=STOCHASTIC
+pIndicador32=NEW, SYMBOL, CURRENT, 5, 3, 3, SIMPLE, LOWHIGH
+; ▪ IND33
+iIndicador33=TEMA
+pIndicador33=0, SYMBOL, CURRENT, 14, 0, CLOSE
+; ▪ IND34
+iIndicador34=TRIX
+pIndicador34=NEW, SYMBOL, CURRENT, 14, CLOSE
+; ▪ IND35
+iIndicador35=VIDYA
+pIndicador35=0, SYMBOL, CURRENT, 15, 12, 0, CLOSE
+; ▪ IND36
+iIndicador36=VOLUMES
+pIndicador36=NEW, SYMBOL, CURRENT, TICK
+; ▪ IND37
+iIndicador37=WPR
+pIndicador37=NEW, SYMBOL, CURRENT, 14
+; ▪ IND38
+iIndicador38=Examples/ZigzagColor.ex5
+pIndicador38=0, SYMBOL, CURRENT, 12, 5, 3
+; ▪ IND39
+iIndicador39=Luciano/gann_hilo.ex5
+pIndicador39=0, SYMBOL, CURRENT, 9, SIMPLE
+; ▪ IND40
+iIndicador40=MA
+pIndicador40=0, SYMBOL, CURRENT, 3, 0, LINEAR, HIGH
+; ▪ IND41
+iIndicador41=MA
+pIndicador41=0, SYMBOL, CURRENT, 17, 0, SIMPLE, CLOSE
+; ▪ IND42
+iIndicador42=MA
+pIndicador42=0, SYMBOL, CURRENT, 13, 0, SIMPLE, CLOSE
+; ▪ IND43
+iIndicador43=MA
+pIndicador43=0, SYMBOL, CURRENT, 11, 0, SIMPLE, CLOSE
+; ▪ IND44
+iIndicador44=
+pIndicador44=
+; ▪ IND45
+iIndicador45=
+pIndicador45=
+; ▪ IND46
+iIndicador46=
+pIndicador46=
+; ▪ IND47
+iIndicador47=
+pIndicador47=
+; ▪ IND48
+iIndicador48=
+pIndicador48=
+; ▪ IND49
+iIndicador49=
+pIndicador49=
+; ▪ IND50
+iIndicador50=
+pIndicador50=
+; 
+; ✔ Variaveis Modeláveis:
+ajudaVLembrete1=EX: NEW, SYMBOL, CURRENT, INT0, INT5, EXPONENTIAL, CLOSE
+ajudaVLembrete2=EX: STR0 && 0:IND1[INT0] < 1:IND0[2] && 0:IND0[1] > 1:IND0[1]
+; ▪ Integers
+int0=300
+int1=-150
+int2=0||0||1||10||N
+int3=0||0||1||10||N
+int4=0||0||1||10||N
+int5=0||0||1||10||N
+int6=0||0||1||10||N
+int7=0||0||1||10||N
+int8=0||0||1||10||N
+int9=0||0||1||10||N
+int10=0||0||1||10||N
+int11=0||0||1||10||N
+int12=0||0||1||10||N
+int13=0||0||1||10||N
+int14=0||0||1||10||N
+int15=0||0||1||10||N
+; ▪ Double
+dou0=0||0||0.000000||0.000000||N
+dou1=0||0||0.000000||0.000000||N
+dou2=0||0||0.000000||0.000000||N
+dou3=0||0||0.000000||0.000000||N
+dou4=0||0||0.000000||0.000000||N
+dou5=0||0||0.000000||0.000000||N
+dou6=0||0||0.000000||0.000000||N
+dou7=0||0||0.000000||0.000000||N
+dou8=0||0||0.000000||0.000000||N
+dou9=0||0||0.000000||0.000000||N
+dou10=0||0||0.000000||0.000000||N
+dou11=0||0||0.000000||0.000000||N
+dou12=0||0||0.000000||0.000000||N
+dou13=0||0||0.000000||0.000000||N
+dou14=0||0||0.000000||0.000000||N
+dou15=0||0||0.000000||0.000000||N
+; ▪ String
+str0=...
+str1=...
+str2=...
+str3=...
+str4=...
+str5=...
+str6=...
+str7=...
+str8=...
+str9=...
+str10=...
+str11=...
+str12=...
+str13=...
+str14=...
+str15=...
+; 
+; ✔ Backtests e Otimizações:
+ajudaBOLembrete0=Mostrado em OnTester (backtest) ou Resultados (Otimizacao).
+backtestMetodo=0
